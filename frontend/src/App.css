@@ -1,0 +1,27 @@
+/* Ensure the body and html take the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Apply the background image */
+body {
+  background-image: url('/public/photos/backgroundimage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+}
+
+/* Optional: Styling for form background */
+.form-content {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background for form */
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

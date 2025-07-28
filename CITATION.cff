@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software in your work, please cite it as below."
+authors:
+  - given-names: "Ajay Anil"
+    family-names: "Kumar"
+  - given-names: "Mitul"
+    family-names: "Garg"
+title: "AutoAnchor"
+version: "1.0.0"
+date-released: 2025-07-29
+repository-code: "https://github.com/Auto-Anchor/Auto-Anchor"

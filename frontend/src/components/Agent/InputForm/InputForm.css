@@ -1,0 +1,80 @@
+/* Container for the input form */
+.chat-input {
+    border: none !important;
+
+}
+
+.chat-input-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Styling the form */
+.chat-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between input and button */
+    width: 100%;
+    max-width: 800px; /* Responsive width */
+    background-color: #444444; /* Slightly lighter than the background */
+    border-radius: 25px; /* Rounded edges */
+    padding: 0.5rem; /* Inner padding for the form */
+}
+
+/* Different color states */
+.blue-form .chat-form {
+    background-color: #004ea2; /* Blue */
+}
+
+.red-form .chat-form {
+    background-color: #910000; /* Red */
+}
+
+.green-form .chat-form {
+    background-color: #00721b; /* Green */
+}
+
+
+/* Input field styling */
+.chat-input {
+    flex-grow: 1; /* Makes the input expand to fill available space */
+    /* padding: 0.5rem 1rem; Inner spacing */
+    font-size: 1rem; /* Font size */
+    background-color: transparent; /* Matches form background */
+    border: none; /* Removes the border */
+    outline: none; /* Removes focus outline */
+    color: white; /* White text for contrast */
+    border-radius: 25px; /* Ensures rounded input field matches form */
+}
+
+/* Placeholder styling */
+.chat-input::placeholder {
+    
+    font-size: large;
+    color: #ffffff; /* Light gray placeholder text */
+}
+
+/* Submit button styling */
+.chat-submit-button {
+    padding: 0.5rem 1rem;
+    border-radius: 25px; /* Fully rounded button */
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:transparent; /* Slightly lighter than form background */
+    color: white; /* White text for contrast */
+    cursor: pointer;
+    border: none; /* Removes button border */
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+.chat-submit-button:hover {
+    background-color: #ffffff; /* Lighter hover effect */
+    color: black;
+}
+
+/* Submit button focus styles */
+.chat-submit-button:focus {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); /* Subtle glow */
+}

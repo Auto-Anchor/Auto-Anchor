@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+auto_anchor.egg-info/
+.env
+keys/
+terraform_files/.terraform.lock.hcl
+terraform_files/.terraform/
+terraform_files/terraform.tfstate
+terraform_files/terraform.tfstate.backup
+example/terraform_files/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/darwin_arm64/terraform-provider-aws_v4.67.0_x5
+

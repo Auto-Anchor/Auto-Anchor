@@ -1,0 +1,9 @@
+{
+    "app_type": "streamlit",
+    "python_version": "3.11",
+    "work_dir": "/Users/anilrao/Documents/GitHub/Auto-Anchor-Website",
+    "entrypoint": "/Users/anilrao/Documents/GitHub/Auto-Anchor-Website/homepage.py",
+    "folder_path": "/Users/anilrao/Documents/GitHub/Auto-Anchor-Website",
+    "environment_path": "/opt/homebrew/bin/python3.11",
+    "instance_size": "t3.large"
+}

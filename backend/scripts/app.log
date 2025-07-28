@@ -1,0 +1,109 @@
+2025-07-29 01:48:34,569 - api_logger - INFO - 7031 - 8556896000 - main.py:641 - Application shutdown initiated.
+2025-07-29 03:10:44,872 - api_logger - INFO - 8588 - 8556896000 - main.py:632 - Application startup complete.
+2025-07-29 03:10:44,873 - api_logger - INFO - 8588 - 8556896000 - main.py:633 - OpenAPI schema available at /docs or /redoc
+2025-07-29 03:10:44,873 - api_logger - INFO - 8588 - 8556896000 - main.py:636 - Logging to console and file: app.log
+2025-07-29 03:10:49,049 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=779d7263-7c6d-42e4-9610-8c567752d1bd Request started: GET /api/get-keys/ Client: 127.0.0.1
+2025-07-29 03:10:49,052 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=779d7263-7c6d-42e4-9610-8c567752d1bd Request finished: GET /api/get-keys/ Status: 307 Took: 2.19ms
+2025-07-29 03:10:49,053 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=f138b8ac-1252-4ab5-9ad0-6709f507c46b Request started: GET /api/get-keys/ Client: 127.0.0.1
+2025-07-29 03:10:49,054 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=f138b8ac-1252-4ab5-9ad0-6709f507c46b Request finished: GET /api/get-keys/ Status: 307 Took: 0.21ms
+2025-07-29 03:10:49,054 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=e761dcf4-8944-42b3-9705-3879269773bd Request started: GET /api/get-keys Client: 127.0.0.1
+2025-07-29 03:10:49,055 - api_logger - INFO - 8588 - 6149451776 - main.py:137 - Received request to /api/get-keys
+2025-07-29 03:10:49,056 - api_logger - ERROR - 8588 - 6149451776 - main.py:147 - Error in /api/get-keys
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1003, in load_decrypted_keys
+    "public_key": self.fernet.decrypt(encrypted_data["public_key"].encode()).decode(),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 84, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 118, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/main.py", line 140, in get_keys
+    keys = credentials_store.load_decrypted_keys()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1007, in load_decrypted_keys
+    raise RuntimeError(f"Error loading keys: {e}")
+RuntimeError: Error loading keys: 
+2025-07-29 03:10:49,059 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=e761dcf4-8944-42b3-9705-3879269773bd Request finished: GET /api/get-keys Status: 500 Took: 4.63ms
+2025-07-29 03:10:49,060 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=0609d640-26ba-453d-b906-0e286e5f2f2d Request started: GET /api/get-keys Client: 127.0.0.1
+2025-07-29 03:10:49,060 - api_logger - INFO - 8588 - 6149451776 - main.py:137 - Received request to /api/get-keys
+2025-07-29 03:10:49,061 - api_logger - ERROR - 8588 - 6149451776 - main.py:147 - Error in /api/get-keys
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1003, in load_decrypted_keys
+    "public_key": self.fernet.decrypt(encrypted_data["public_key"].encode()).decode(),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 84, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 118, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/main.py", line 140, in get_keys
+    keys = credentials_store.load_decrypted_keys()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1007, in load_decrypted_keys
+    raise RuntimeError(f"Error loading keys: {e}")
+RuntimeError: Error loading keys: 
+2025-07-29 03:10:49,063 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=0609d640-26ba-453d-b906-0e286e5f2f2d Request finished: GET /api/get-keys Status: 500 Took: 3.02ms
+2025-07-29 03:11:06,654 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=6b62eb2d-ac95-428c-8aca-04a4d20fab5a Request started: GET /api/get-keys/ Client: 127.0.0.1
+2025-07-29 03:11:06,656 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=6b62eb2d-ac95-428c-8aca-04a4d20fab5a Request finished: GET /api/get-keys/ Status: 307 Took: 0.57ms
+2025-07-29 03:11:06,658 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=b856f2db-6e3d-4b20-abef-c163120f7702 Request started: GET /api/get-keys/ Client: 127.0.0.1
+2025-07-29 03:11:06,658 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=b856f2db-6e3d-4b20-abef-c163120f7702 Request finished: GET /api/get-keys/ Status: 307 Took: 0.27ms
+2025-07-29 03:11:06,660 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=ad495992-7564-4761-9f9a-e7e7432a6a5c Request started: GET /api/get-keys Client: 127.0.0.1
+2025-07-29 03:11:06,660 - api_logger - INFO - 8588 - 6149451776 - main.py:137 - Received request to /api/get-keys
+2025-07-29 03:11:06,661 - api_logger - ERROR - 8588 - 6149451776 - main.py:147 - Error in /api/get-keys
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1003, in load_decrypted_keys
+    "public_key": self.fernet.decrypt(encrypted_data["public_key"].encode()).decode(),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 84, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 118, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/main.py", line 140, in get_keys
+    keys = credentials_store.load_decrypted_keys()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1007, in load_decrypted_keys
+    raise RuntimeError(f"Error loading keys: {e}")
+RuntimeError: Error loading keys: 
+2025-07-29 03:11:06,662 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=ad495992-7564-4761-9f9a-e7e7432a6a5c Request finished: GET /api/get-keys Status: 500 Took: 2.04ms
+2025-07-29 03:11:06,679 - api_logger - INFO - 8588 - 8556896000 - main.py:64 - rid=2d68b728-d17a-416f-97c7-b1412deee392 Request started: GET /api/get-keys Client: 127.0.0.1
+2025-07-29 03:11:06,717 - api_logger - INFO - 8588 - 6149451776 - main.py:137 - Received request to /api/get-keys
+2025-07-29 03:11:06,717 - api_logger - ERROR - 8588 - 6149451776 - main.py:147 - Error in /api/get-keys
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1003, in load_decrypted_keys
+    "public_key": self.fernet.decrypt(encrypted_data["public_key"].encode()).decode(),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 84, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/cryptography/fernet.py", line 118, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/main.py", line 140, in get_keys
+    keys = credentials_store.load_decrypted_keys()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitulgarg/Desktop/Mitul/AutoAnchorOrganisation/Auto-Anchor/backend/scripts/utils.py", line 1007, in load_decrypted_keys
+    raise RuntimeError(f"Error loading keys: {e}")
+RuntimeError: Error loading keys: 
+2025-07-29 03:11:06,717 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=2d68b728-d17a-416f-97c7-b1412deee392 Request finished: GET /api/get-keys Status: 500 Took: 38.44ms
+2025-07-29 03:11:19,749 - api_logger - INFO - 8588 - 8556896000 - main.py:641 - Application shutdown initiated.

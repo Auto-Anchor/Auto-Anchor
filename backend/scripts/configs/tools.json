@@ -1,0 +1,182 @@
+{
+  "tools": [
+    {
+      "name": "analyzer",
+      "summary": "Analyzes Python files in a directory to identify dependencies and generate a requirements file. Also extracts contextual information like app type, working directory, and entry point.",
+      "input": {
+        "folderPath": {
+          "type": "string",
+          "required": false,
+          "description": "The path to analyze."
+        },
+        "environment": {
+          "type": "string",
+          "required": false,
+          "description": "Environment context."
+        }
+      },
+      "output": {
+        "message": {
+          "type": "string",
+          "description": "Confirmation of data receipt."
+        },
+        "folderPath": {
+          "type": "string",
+          "description": "The received folder path."
+        },
+        "environment": {
+          "type": "string",
+          "description": "The received environment."
+        }
+      },
+      "question": "Provide the folder path to analyze and also specify the path to the python environment.",
+      "class": "AnalyzerValidator"
+    },
+    {
+      "name": "get-creds",
+      "summary": "Fetches AWS credentials and configurations like key pairs, regions, VPCs, subnets, and security groups. Should Usually be at the beggining of the CI/CD Flow.",
+      "input": {},
+      "output": {
+        "success": {
+          "type": "boolean",
+          "description": "True if the process runs correctly."
+        }
+      },
+      "question": "Would you like to fetch AWS credentials and configurations? Yes/No",
+      "class": "GetCredsValidator"
+    },
+    {
+      "name": "dockerfile-gen",
+      "summary": "Generates a Dockerfile based on the specified context data.",
+      "input": {
+        "app_type": {
+          "type": "string",
+          "description": "Type of the application (e.g., 'streamlit').",
+          "required": true
+        },
+        "python_version": {
+          "type": "string",
+          "description": "Python version to use (e.g., '3.8').",
+          "required": true
+        },
+        "work_dir": {
+          "type": "string",
+          "description": "The working directory path.",
+          "required": true
+        },
+        "entrypoint": {
+          "type": "string",
+          "description": "Entrypoint for the application.",
+          "required": true
+        },
+        "folder_path": {
+          "type": "string",
+          "description": "The folder path where the Dockerfile will be generated.",
+          "required": true
+        }
+      },
+      "output": {
+        "success": {
+          "type": "boolean",
+          "description": "True if the Dockerfile was generated successfully."
+        },
+        "error": {
+          "400": "Invalid or missing parameters."
+        }
+      },
+      "question": "Please provide the type of application, python version, work_dir, folder_path, entrypoint file of the application...",
+      "class": "DockerFileGenValidator"
+    },
+    {
+      "name": "jenkinsfile-gen",
+      "summary": "Generates a Jenkinsfile based on the specified context data. When the user asks for this it should not depend on other files like Dockerfile gen.",
+      "input": {
+        "folder_path": {
+          "type": "string",
+          "description": "The folder path where the Jenkinsfile will be generated.",
+          "required": true
+        }
+      },
+      "output": {
+        "success": {
+          "type": "boolean",
+          "description": "True if the Jenkinsfile was generated successfully."
+        },
+        "error": {
+          "400": "Invalid or missing parameters."
+        }
+      },
+      "question": "Can you provide the path to your folder to create the Jenkinsfile?",
+      "class": "JenkinsFileGenValidator"
+    },
+    {
+      "name": "infra",
+      "summary": "Generates Terraform infrastructure configurations and triggers an initial setup for the user's requested infra.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "work_dir": {
+            "type": "string",
+            "description": "The working directory path."
+          },
+          "instance_size": {
+            "type": "string",
+            "description": "The EC2 instance size as required by the User."
+          }
+        },
+        "required": [
+          "work_dir",
+          "instance_size"
+        ]
+      },
+      "output": {
+        "success": {
+          "type": "boolean",
+          "description": "True if Terraform configuration is successfully generated."
+        }
+      },
+      "question": "Do you want to generate Terraform infrastructure configurations and trigger the initial setup? Please Specify the working directory and EC2 instance size for example (t3.micro)",
+      "class": "InfraValidator"
+    },
+    {
+      "name": "get-environments",
+      "summary": "Retrieves available Python versions in a specified directory along with the conda environments and brew environments. It should be called before analyzer if analyzer is to be called.",
+      "input": {},
+      "output": {
+        "python_versions": {
+          "type": "array",
+          "description": "A list of available Python versions in the directory."
+        }
+      },
+      "question": "Please provide the folder path to retrieve python environments...",
+      "class": "GetEnvironmentsValidator"
+    },
+    {
+      "name": "github-webhook-setup",
+      "summary": "Sets up a GitHub webhook for a specified folder path. Should be run once the container is setup (infra) if it is a part of CI/CD setup",
+      "input": {
+        "folder_path": {
+          "type": "string",
+          "description": "The path to the folder for which the GitHub webhook needs to be set up.",
+          "required": true
+        }
+      },
+      "output": {
+        "success": {
+          "type": "boolean",
+          "description": "True if the webhook was set up successfully."
+        },
+        "message": {
+          "type": "string",
+          "description": "A message detailing the output of the webhook creation process."
+        },
+        "error": {
+          "type": "string",
+          "description": "A message describing the error if the webhook setup failed (status code 400)."
+        }
+      },
+      "question": "Please provide the folder path to set up the GitHub webhook.",
+      "class": "GitHubWebhookSetupValidator"
+    }
+  ]
+}
