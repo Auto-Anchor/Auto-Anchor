@@ -17,6 +17,8 @@ No prior DevOps knowledge required. No cloud infra expertise needed. Just code, 
 Youtube End-end demo -  
 [Watch the End-to-End Demo on YouTube](https://www.youtube.com/watch?v=szbxx4Ujl_w)
 
+![](https://github.com/Auto-Anchor/Auto-Anchor/blob/main/images/AnchorUser.png)
+
 Key Features:
 
 🔁 Automatic CI/CD Pipeline Setup
