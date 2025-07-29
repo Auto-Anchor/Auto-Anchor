@@ -161,7 +161,7 @@ You are now ready to meet aCube! Start interacting with our chatbot and see what
 
 ## Starting the application
 
-To start the application execute the `execute.sh` shell script:
+To start the application execute the `execute.sh` shell script once you are done setting up the OpenAI and Gemini API keys:
 
 ```bash
 chmod +x execute.sh
