@@ -50,12 +50,12 @@ You need to have a Mac system to be able to run this application.
 
 Steps:
 
-1. Create a .ssh file in your root (~/) folder and update your public and private ed25519 keys if you haven't already.
-2. Install AWS CLI. 
+1. Create a .[ssh file](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) in your root (~/) folder and update your public and private ed25519 keys if you haven't already.
+2. Install [AWS](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) CLI. 
 3. Create an AWS account. If you have one already then copy your AWS access keys and paste them into the CLI prompts while configuring AWS CLI.
-4. Install GitHub CLI and sign in into your account. Select SSH while logging in.
-5. Install Terraform.
-6. Gemini and OpenAI API Keys
+4. Install [GitHub CLI](https://cli.github.com/) and sign in into your account. Select SSH while logging in.
+5. Install [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+6. Gemini and OpenAI API Keys.
 
 ## High level understanding of the Application
 
@@ -161,7 +161,7 @@ You are now ready to meet aCube! Start interacting with our chatbot and see what
 
 ## Starting the application
 
-To start the application execute the `execute.sh` shell script:
+To start the application execute the `execute.sh` shell script once you are done setting up the OpenAI and Gemini API keys:
 
 ```bash
 chmod +x execute.sh
