@@ -107,3 +107,19 @@ Traceback (most recent call last):
 RuntimeError: Error loading keys: 
 2025-07-29 03:11:06,717 - api_logger - INFO - 8588 - 8556896000 - main.py:80 - rid=2d68b728-d17a-416f-97c7-b1412deee392 Request finished: GET /api/get-keys Status: 500 Took: 38.44ms
 2025-07-29 03:11:19,749 - api_logger - INFO - 8588 - 8556896000 - main.py:641 - Application shutdown initiated.
+2025-08-10 22:10:51,565 - api_logger - INFO - 6006 - 8553357504 - main.py:632 - Application startup complete.
+2025-08-10 22:10:51,566 - api_logger - INFO - 6006 - 8553357504 - main.py:633 - OpenAPI schema available at /docs or /redoc
+2025-08-10 22:10:51,566 - api_logger - INFO - 6006 - 8553357504 - main.py:636 - Logging to console and file: app.log
+2025-08-10 22:11:26,622 - api_logger - INFO - 6006 - 8553357504 - main.py:641 - Application shutdown initiated.
+2025-08-10 22:11:29,984 - api_logger - INFO - 6087 - 8553357504 - main.py:632 - Application startup complete.
+2025-08-10 22:11:29,984 - api_logger - INFO - 6087 - 8553357504 - main.py:633 - OpenAPI schema available at /docs or /redoc
+2025-08-10 22:11:29,984 - api_logger - INFO - 6087 - 8553357504 - main.py:636 - Logging to console and file: app.log
+2025-08-10 22:13:17,496 - api_logger - INFO - 6087 - 8553357504 - main.py:64 - rid=365d82d2-69cb-444a-8d50-31e309e73f4a Request started: POST /analyzer Client: 127.0.0.1
+2025-08-10 22:13:17,502 - api_logger - INFO - 6087 - 8553357504 - main.py:196 - Received request to /analyzer for folder: /Users/mitulgarg/Desktop/Mitul/AutoAnchorStreamlit/Auto-Anchor-Website, env: /Users/mitulgarg/Desktop/Mitul/Auto Anchor/.venv/bin/python3.13
+2025-08-10 22:13:17,511 - api_logger - DEBUG - 6087 - 8553357504 - main.py:204 - Found 3 Python files in /Users/mitulgarg/Desktop/Mitul/AutoAnchorStreamlit/Auto-Anchor-Website
+2025-08-10 22:13:17,512 - api_logger - DEBUG - 6087 - 8553357504 - main.py:209 - Found 1 unique imports.
+2025-08-10 22:13:17,799 - api_logger - DEBUG - 6087 - 8553357504 - main.py:211 - Found 1 matching libraries in environment.
+2025-08-10 22:13:17,799 - api_logger - INFO - 6087 - 8553357504 - main.py:213 - Generated requirements file in /Users/mitulgarg/Desktop/Mitul/AutoAnchorStreamlit/Auto-Anchor-Website
+2025-08-10 22:13:17,801 - api_logger - INFO - 6087 - 8553357504 - main.py:219 - Analysis complete: {'app_type': 'Streamlit', 'work_dir': '/Users/mitulgarg/Desktop/Mitul/AutoAnchorStreamlit/Auto-Anchor-Website', 'entrypoint': 'homepage.py'}
+2025-08-10 22:13:17,802 - api_logger - INFO - 6087 - 8553357504 - main.py:80 - rid=365d82d2-69cb-444a-8d50-31e309e73f4a Request finished: POST /analyzer Status: 200 Took: 305.04ms
+2025-08-10 22:13:25,685 - api_logger - INFO - 6087 - 8553357504 - main.py:641 - Application shutdown initiated.

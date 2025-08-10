@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 # Set up paths
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-AGENT_DIR = "/Users/anilrao/Documents/GitHub/Auto-Anchor-Merged/aCube/src"
+AGENT_DIR = "aCube/src"
 # Set up DB path for sessions
 # Create the FastAPI app using ADK's helper
 app: FastAPI = get_fast_api_app(
